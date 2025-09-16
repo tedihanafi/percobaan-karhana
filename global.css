@@ -1,0 +1,182 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/* *********************************** BAGIAN PROMOSI ************************************** */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 80s linear infinite;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: max-content;
+}
+
+/* Optional: wrapper class if needed */
+.promosi-marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 1.5rem;
+}
+
+/* Kiri */
+.promosi-marquee-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2rem;
+  background: linear-gradient(to right, #fef3c7, transparent);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Kanan */
+.promosi-marquee-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 2rem;
+  background: linear-gradient(to left, #fef3c7, transparent);
+  z-index: 10;
+  pointer-events: none;
+}
+/* *********************************** AKHIR BAGIAN PROMOSI ************************************** */
+
+/* *********************************** BAGIAN HERO SLIDER ************************************** */
+/* *********************************** AKHIR BAGIAN HERO SLIDER ************************************** */
+
+/* testimoni */
+.customer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slick-slide {
+  margin: 0 15px; /* Reduced margin for better alignment */
+  transition: transform 0.3s ease-in-out; /* Smooth transitions on hover */
+}
+
+.slick-slide img {
+  max-width: 100%;
+  height: auto; /* Ensure images retain their aspect ratio */
+  display: block;
+  transition: transform 0.3s ease; /* Add smooth zoom effect on hover */
+}
+
+.slick-slide:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px; /* Add some padding for visual appeal */
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  display: flex; /* Ensure slides are in a row */
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 1px;
+  padding: 10px; /* Add some space around each slide */
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+}
+
+.copy {
+  padding-top: 250px;
+}
+
+/* Add responsiveness for mobile devices */
+@media (max-width: 768px) {
+  .slick-slide {
+    margin: 0 10px;
+  }
+  .customer-logos {
+    padding: 20px; /* Add padding to the slider on smaller screens */
+  }
+}
+
+@media (max-width: 520px) {
+  .slick-slide {
+    margin: 0 5px; /* Reduce the margin further on small screens */
+  }
+}
+
+/* testimoni */
+
+/* *********************************** BAGIAN ICON WA ************************************** */
+/* Animasi naik-turun smooth */
+.wa-fab {
+  animation: bounceSmooth 2s infinite ease-in-out;
+}
+
+@keyframes bounceSmooth {
+  0%,
+  100% {
+    transform: translateY(0); /* posisi normal */
+  }
+  50% {
+    transform: translateY(-8px); /* naik sedikit */
+  }
+}
+/* *********************************** AKHIR BAGIAN ICON WA ************************************** */
+
+/* *********************************** BAGIAN alert 2 menit sekali ************************************** */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animate-bounceIn {
+  animation: bounceIn 0.6s ease-out;
+}
+/* *********************************** AKHIR BAGIAN alert 2 menit sekali ************************************** */
